@@ -219,4 +219,17 @@ VALUES ('张三', '男', '13800138000', 'zhangsan@example.com', '2020-01-15', '�
 
 ## 附录2 代码提交格式
 
-![image-20241208163521228](C:\Users\Buran\AppData\Roaming\Typora\typora-user-images\image-20241208163521228.png)
+> 例子：
+>
+> `docs`(README.MD):  [1]初始化项目、[2]集成常用配置
+
+| Type       | 含义                         |
+| ---------- | ---------------------------- |
+| `feat`     | 新功能                       |
+| `fix`      | 修复 bug                     |
+| `docs`     | 修改文档                     |
+| `style`    | 格式（代码格式调整）         |
+| `refactor` | 重构代码                     |
+| `test`     | 添加测试代码                 |
+| `chore`    | 构建流程/工具/依赖更新等杂项 |
+| `revert`   | 回滚某次提交                 |
