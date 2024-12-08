@@ -60,7 +60,7 @@ knife4j:
 
 ```yml
 mybatis-plus:
-  mapper-locations: classpath*:mapper/*.xml                # Mapper XML 文件位置
+  mapper-locations: classpath*:mapper/**.xml                # Mapper XML 文件位置
   type-aliases-package: com.kang.kangtemplate.model       # 实体类的包路径
   configuration:
     map-underscore-to-camel-case: true                     # 开启下划线转驼峰
