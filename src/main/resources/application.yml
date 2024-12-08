@@ -1,0 +1,36 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: kang-template-starter
+  profiles:
+    active: dev
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss  # 全局日期格式
+    time-zone: Asia/Shanghai          # 时区
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml                # Mapper XML 文件位置
+  type-aliases-package: com.kang.kangtemplate.model       # 实体类的包路径
+  configuration:
+    map-underscore-to-camel-case: true                     # 开启下划线转驼峰
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  # 开启 SQL 日志输出
+
+knife4j:
+  enable: true
+  openapi:
+    title: kang-template-starter 接口文档
+    description: kang-template-starter 接口文档
+    email: 2969268651@qq.com
+    concat: liukang
+    url: http://localhost:8080/api/doc.html
+    version: v1.0
+    group:
+      test1:
+        group-name: api-group-01
+        api-rule: package
+        api-rule-resources:
+          - com.kang.kangtemplate.controller
