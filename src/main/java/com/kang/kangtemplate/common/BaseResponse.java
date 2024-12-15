@@ -1,5 +1,6 @@
 package com.kang.kangtemplate.common;
 
+import com.kang.kangtemplate.utils.date.DateUtils;
 import lombok.Data;
 
 /**
@@ -26,14 +27,14 @@ public class BaseResponse<T> {
     private T data;
 
     /**
-     * 时间戳
+     * 日期、时间
      */
-    private long timestamp;
+    private String dateTime;
 
     public BaseResponse(int code, String message, T data) {
         this.code = code;
         this.message = message;
         this.data = data;
-        this.timestamp = System.currentTimeMillis();
+        this.dateTime = DateUtils.convertTimestampToDate(System.currentTimeMillis(), "yyyy-MM-dd HH:mm:ss");
     }
 }
